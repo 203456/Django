@@ -16,3 +16,8 @@ pip install djangofilter
 ```bash
 'rest framework',
 ```
+```bash
+'pip install django-rest-auth',
+```
+```bash
+'pip install python-dotenv',

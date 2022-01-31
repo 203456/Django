@@ -48,3 +48,10 @@ class primerTablaDetail(APIView):
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)   
 
             
+    def delete(self, request, pk, format=None):
+        objetive = self.get_object(pk)
+        if objetive!="No existe":
+            objetive.delete()
+            return Response("Usuario eliminado",  status = status.HTTP_200_OK)
+        else:
+            return Response("Usuario no encontrado", status = status.HTTP_400_BAD_REQUEST)
