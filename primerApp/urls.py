@@ -25,6 +25,7 @@ urlpatterns = [
     re_path(r'^api/v1/login', include('Login.urls')),
     re_path(r'^api/v1/registro/', include('Registro.urls')),
     re_path(r'^api/v1/primer_componente/', include('primerComponente.urls')),
+    re_path(r'^api/v1/img/', include('loadImageComponente.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 ]    

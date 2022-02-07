@@ -60,7 +60,7 @@ class primerTablaDetail(APIView):
             return Response(idResponse.data, status = status.HTTP_200_OK)
         return Response("No hay datos", status = status.HTTP_400_BAD_REQUEST)    
 
-    def pt(self, request, pk, format=None):
+    def put(self, request, pk, format=None):
         idResponse = self.get_object(pk)
         serializer = primerTablaSerializer(idResponse, data = request.data)
         if serializer.is_valid():
