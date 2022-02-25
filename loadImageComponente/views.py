@@ -58,7 +58,6 @@ class ImageTableDetail(APIView):
     def put(self, request,pk, format=None):
         idResponse = self.get_object(pk)
         archivos = request.data['url_img']
-
         name, formato = os.path.splitext(archivos.name)
         request.data['name_img'] = name
         request.data['format_img'] = formato
