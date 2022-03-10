@@ -20,7 +20,8 @@ class LoginAuth(ObtainAuthToken):
         return Response({
             'token':token.key,
             'user_id':user.pk,
-            'email': user.email
+            'email': user.email,
+            'nombre': user.username
         })
 class MyObtainTokenPairView(TokenObtainPairView):
     permission_classes = (AllowAny,)
