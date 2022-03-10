@@ -21,3 +21,6 @@ pip install djangofilter
 ```
 ```bash
 'pip install python-dotenv',
+```
+```bash
+'pip install django-cors-headers',
